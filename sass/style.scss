@@ -4,7 +4,14 @@
   margin: 0;
 }
 
+html {
+  //height: 100%;
+}
+
 body {
+  //height: 100%;
+  padding: 0;
+  margin: 0;
   font-size: 100%;
   font-family: 'Lato', sans-serif;
 }
@@ -24,13 +31,38 @@ header.main-header {
 }
 
 nav {
-  display: none;
+  max-height: 0px;
   position: absolute;
-  top: 100%;
+  background-color: rgba(0,0,0, 0.9);
+  opacity: .7;
+  top: 0;
   left: 0;
   width: 100%;
   text-align: center;
+  transition: max-height .6s;
+  -o-transition: max-height .6s;
 }
+
+#main-nav {
+  opacity: 0;
+  height: 100vh;
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  transition: all .4s ease-in-out;
+}
+
+#main-nav a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; 
+}
+
 
 .nav-toggle-label {
   position: absolute;
@@ -92,7 +124,11 @@ nav ul {
 }
 
 .nav-toggle:checked ~ nav {
-  display: block;
+  max-height: 100vh;
+
+  #main-nav {
+    opacity: 1;
+  }
 }
 
 // TOGGLE BUTTON ANIMATION
@@ -115,5 +151,12 @@ nav ul {
   }
 }
 
+section {
+  height: 800px;
+}
 
 
+
+@media only screen and (max-width: 760px) {
+
+}
