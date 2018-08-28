@@ -39,12 +39,18 @@ nav {
     background: black;
     height: 2px;
     width: 1.7em;
-    border-radius: 2px; }
+    border-radius: 2px;
+    position: relative;
+    transition: all .4s ease-in-out; }
+  .nav-toggle-label span {
+    top: 0px;
+    opacity: 1;
+    transition: all .2s ease-in-out; }
   .nav-toggle-label::before, .nav-toggle-label::after {
     content: '';
     position: absolute; }
   .nav-toggle-label::before {
-    bottom: 22px; }
+    top: 12px; }
   .nav-toggle-label::after {
     top: 22px; }
 
@@ -64,12 +70,14 @@ nav ul {
   display: block; }
 
 .nav-toggle:checked ~ .nav-toggle-label::before {
-  top: 32px;
+  top: 20px;
   transform: rotate(45deg); }
 .nav-toggle:checked ~ .nav-toggle-label::after {
-  top: -30px;
-  visibility: hidden; }
+  top: 20px;
+  transform: rotate(-45deg); }
 .nav-toggle:checked ~ .nav-toggle-label span {
+  top: -40px;
+  opacity: 0;
   transform: rotate(-45deg); }
 
 /*# sourceMappingURL=style.css.map */

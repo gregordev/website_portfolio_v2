@@ -48,8 +48,16 @@ nav {
     height: 2px;
     width: 1.7em;
     border-radius: 2px;
+    position: relative;
+    transition: all .4s ease-in-out;
     
     
+  }
+
+  & span {
+    top: 0px;
+    opacity: 1;
+    transition: all .2s ease-in-out;
   }
 
   &::before, &::after {
@@ -59,7 +67,7 @@ nav {
   }
 
   &::before {
-    bottom: 22px;
+    top: 12px;
   }
 
   &::after {
@@ -90,17 +98,19 @@ nav ul {
 // TOGGLE BUTTON ANIMATION
 .nav-toggle:checked ~ .nav-toggle-label {
   &::before {
-    top: 32px;
+    top: 20px;
     transform: rotate(45deg);
   }
 
   &::after {
-    top: -30px;
-    visibility: hidden;
+    top: 20px;
+    transform: rotate(-45deg);
     
   }
 
   span {
+    top: -40px;
+    opacity: 0;
     transform: rotate(-45deg);
   }
 }
