@@ -41,18 +41,21 @@ nav {
   display: flex;
   align-items: center;
 
+  // TOGGLE BUTTON VIEW STYLES
   & span, &::before, &::after {
     display: block;
     background: black;
     height: 2px;
-    width: 1.5em;
+    width: 1.7em;
     border-radius: 2px;
+    
     
   }
 
   &::before, &::after {
     content: '';
     position: absolute;
+    
   }
 
   &::before {
@@ -69,16 +72,37 @@ nav > ul > li > a {
   color: black;
 }
 
-nav > ul {
+nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+// Input is always hidden, I work only on label
 .nav-toggle {
   display: none;
 }
 
 .nav-toggle:checked ~ nav {
   display: block;
+}
+
+// TOGGLE BUTTON ANIMATION
+.nav-toggle:checked ~ .nav-toggle-label {
+  &::before {
+    top: 32px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: -30px;
+    visibility: hidden;
+    
+  }
+
+  span {
+    transform: rotate(-45deg);
+  }
 }
 
 
