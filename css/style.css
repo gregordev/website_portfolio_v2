@@ -33,6 +33,7 @@ nav {
   -o-transition: max-height .6s; }
 
 #main-nav {
+  visibility: hidden;
   opacity: 0;
   height: 100vh;
   position: relative;
@@ -62,7 +63,8 @@ nav {
   margin-left: 1em;
   height: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
   .nav-toggle-label span, .nav-toggle-label::before, .nav-toggle-label::after {
     display: block;
     background: black;
@@ -98,7 +100,8 @@ nav ul {
 .nav-toggle:checked ~ nav {
   max-height: 100vh; }
   .nav-toggle:checked ~ nav #main-nav {
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
 
 .nav-toggle:checked ~ .nav-toggle-label::before {
   top: 20px;
