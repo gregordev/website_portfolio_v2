@@ -24,6 +24,7 @@ header.main-header {
 }
 
 nav {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -39,6 +40,28 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
+
+  & span, &::before, &::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 1.5em;
+    border-radius: 2px;
+    
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    bottom: 22px;
+  }
+
+  &::after {
+    top: 22px;
+  }
 }
 
 nav > ul > li > a {
@@ -52,6 +75,10 @@ nav > ul {
 
 .nav-toggle {
   display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
 }
 
 

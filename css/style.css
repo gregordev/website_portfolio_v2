@@ -19,6 +19,7 @@ header.main-header {
   height: 65px; }
 
 nav {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -33,6 +34,19 @@ nav {
   height: 100%;
   display: flex;
   align-items: center; }
+  .nav-toggle-label span, .nav-toggle-label::before, .nav-toggle-label::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 1.5em;
+    border-radius: 2px; }
+  .nav-toggle-label::before, .nav-toggle-label::after {
+    content: '';
+    position: absolute; }
+  .nav-toggle-label::before {
+    bottom: 22px; }
+  .nav-toggle-label::after {
+    top: 22px; }
 
 nav > ul > li > a {
   text-decoration: none;
@@ -43,5 +57,8 @@ nav > ul {
 
 .nav-toggle {
   display: none; }
+
+.nav-toggle:checked ~ nav {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */
