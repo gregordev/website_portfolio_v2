@@ -1,3 +1,8 @@
+/*
+  COLORS
+*/
+$main-background-color: #f3f6fb;
+
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -15,17 +20,14 @@ body {
   font-size: 100%;
   font-family: 'Lato', sans-serif;
   color: black;
-  background: #f3f6fb;
+  background: $main-background-color;
   overflow-x: hidden;
 }
 
-/*
-  COLORS
-*/
-$color-nav: #fff;
+
 
 header.main-header {
-  background: $color-nav;
+  background: $main-background-color;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -167,14 +169,25 @@ section {
   width: 50%;
 }
 
+/* 
+  TYPED JS
+*/
+
+.typed {
+  display: inline-block;
+}
+
+.typed-cursor {
+  font-size: 2em !important;
+}
+
 
 
 @media only screen and (min-width: 1000px) {
   
 
   header.main-header {
-    
-    background: $color-nav;
+    border-bottom: 1px black solid;
     text-align: center;
     position: fixed;
     z-index: 999;

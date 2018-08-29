@@ -1,3 +1,6 @@
+/*
+  COLORS
+*/
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -12,11 +15,8 @@ body {
   background: #f3f6fb;
   overflow-x: hidden; }
 
-/*
-  COLORS
-*/
 header.main-header {
-  background: #fff;
+  background: #f3f6fb;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -125,9 +125,18 @@ section {
 .heading-container {
   width: 50%; }
 
+/* 
+  TYPED JS
+*/
+.typed {
+  display: inline-block; }
+
+.typed-cursor {
+  font-size: 2em !important; }
+
 @media only screen and (min-width: 1000px) {
   header.main-header {
-    background: #fff;
+    border-bottom: 1px black solid;
     text-align: center;
     position: fixed;
     z-index: 999;
