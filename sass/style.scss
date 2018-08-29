@@ -15,6 +15,8 @@ body {
   font-size: 100%;
   font-family: 'Lato', sans-serif;
   color: black;
+  background: #f3f6fb;
+  overflow-x: hidden;
 }
 
 /*
@@ -151,13 +153,18 @@ nav ul {
 }
 
 section {
+  width: 100%;
   height: 800px;
 }
 
-.section-1 {
+.heading {
   position: absolute;
   top: 100px;
   left: 100px;
+}
+
+.heading-container {
+  width: 50%;
 }
 
 
@@ -166,13 +173,14 @@ section {
   
 
   header.main-header {
-    left: 100px;
+    
     background: $color-nav;
     text-align: center;
     position: fixed;
     z-index: 999;
     width: 100%;
     height: 65px;
+    width: 100%;
     
   }
 
@@ -185,13 +193,15 @@ section {
   }
 
   nav {
-  height: auto;
-  position: absolute;
-  background: #fff;
-  opacity: 1;
-  top: 0;
-  left: 0;
-  text-align: center;
+    padding-left: 100px;
+    height: auto;
+    position: absolute;
+    background: #fff;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
 }
 
 

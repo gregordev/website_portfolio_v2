@@ -8,7 +8,9 @@ body {
   margin: 0;
   font-size: 100%;
   font-family: 'Lato', sans-serif;
-  color: black; }
+  color: black;
+  background: #f3f6fb;
+  overflow-x: hidden; }
 
 /*
   COLORS
@@ -112,22 +114,26 @@ nav ul {
   transform: rotate(-45deg); }
 
 section {
+  width: 100%;
   height: 800px; }
 
-.section-1 {
+.heading {
   position: absolute;
   top: 100px;
   left: 100px; }
 
+.heading-container {
+  width: 50%; }
+
 @media only screen and (min-width: 1000px) {
   header.main-header {
-    left: 100px;
     background: #fff;
     text-align: center;
     position: fixed;
     z-index: 999;
     width: 100%;
-    height: 65px; }
+    height: 65px;
+    width: 100%; }
 
   .logo-container {
     display: none; }
@@ -136,13 +142,15 @@ section {
     display: none; }
 
   nav {
+    padding-left: 100px;
     height: auto;
     position: absolute;
     background: #fff;
     opacity: 1;
     top: 0;
     left: 0;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
 
   #main-nav {
     margin-top: 0px;
