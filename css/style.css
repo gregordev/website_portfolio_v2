@@ -173,35 +173,61 @@ section {
   width: 100%;
   height: 800px; }
 
-.heading {
-  position: absolute;
-  top: 100px;
+section.heading {
   text-align: center; }
 
-.heading-container {
+.heading-text {
   width: 100%; }
+
+.heading-mypic {
+  display: none; }
+
+section.about {
+  background: #fff; }
 
 @media only screen and (min-width: 1000px) {
   .text {
-    font-size: 35px; }
-
-  .text--greeting {
-    font-size: 35px; }
+    font-size: 2.1em; }
 
   .text--about {
-    font-size: 18px; }
+    padding-top: 2em;
+    font-size: 1.2em; }
 
   /*
   HEADING
   */
-  .heading {
-    position: absolute;
-    top: 100px;
-    left: 100px;
+  section.heading {
     text-align: left; }
 
   .heading-container {
-    width: 40%; }
+    padding-left: 100px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative; }
+
+  .heading-text {
+    margin-top: 150px;
+    width: 55%; }
+
+  p.text--about {
+    width: 80%; }
+
+  .heading-photo {
+    background: #354590;
+    background-image: url("../img/right.png");
+    width: 45%;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+  .heading-mypic {
+    display: block;
+    position: absolute;
+    left: calc(55% - 250px);
+    bottom: 0; }
+
+  .image-myImage {
+    width: 550px; }
 
   .typed {
     display: inline-block;
@@ -212,7 +238,6 @@ section {
     letter-spacing: 0.55px; }
 
   header.main-header {
-    border-bottom: 1px black solid;
     text-align: center;
     position: fixed;
     z-index: 999;
