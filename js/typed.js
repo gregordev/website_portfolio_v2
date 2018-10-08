@@ -367,7 +367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          if (nextString && curStringAtPosition === nextString.substr(0, curStrPos)) {
 	            _this4.stopNum = curStrPos;
 	          } else {
-	            _this4.stopNum = 0;
+	            _this4.stopNum = 1;
 	          }
 	        }
 	

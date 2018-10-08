@@ -1,26 +1,59 @@
+<!--
+
+  Autor: 
+  - Grzegorz Walczak (GregorDev.pl || github.com/gregordev)
+
+  Kilka słów ode mnie:
+  - jestem całkowicie świadomy tego, że kod niestety nie jest w pełni semantyczny
+  - chaos w kodzie Sass wynika z pośpiechu w jakim rozwijałem ten projekt przez ostatni tydzień
+  - postanowiłem nieco się wyróżnić od innych stażystów i utworzyłem w pełni działający formularz kontatkowy
+  - napisałem działający scrollspy i ciekawie wyglądającą nawigację dla telefonów i tabletów
+  - nie używałem żadnych bibliotek typu Bootstrap, skupiłem się na wykorzystaniu Flexboxa (którego de facto powinienem lepiej umieć)
+  - nieco nadużywam jQuery, ale niestety mam jeszcze problemy z wdrażaniem takich rozwiązań w ES6
+  - całe szczęście, strona wygląda znacznie lepiej niż jej kod
+  - całe szczęście vol.2, projekt nie będzie rozwijany w przyszłości
+
+  ***
+  Tworząc ten projekt uświadomiłem sobie jak niewiele jeszcze umiem.
+  Daje mi to jeszcze większą motywację do pracy nad sobą i nauki 'dobrych praktyk' pisania kodu.
+  Po ukończeniu tego projektu, postanowiłem skupić się na:
+  - nauce pisania czytelnego, semantycznego kodu (BEM)
+  - rozwoju umiejętności w pisaniu kodu Sass (mogłem go używać częściej i... lepiej)
+  - intensywnej nauce ES6 (jestem przekonany, że należy przestać tyle korzystać z jQuery)
+  - rozwoju w zakresie projektowania stron przy wykorzystaniu Flexboxa
+  - wejściu na nieco wyższy poziom w programowaniu w języku PHP
+  ***
+-->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <title>GregorDev.pl | Web Developer</title>
+  <title>GregorDev.pl | Junior Front-End Developer</title>
 </head>
 <body>
+    <main>
   <header class="main-header">
-        <div class="logo-container"><h1 class="logo">GD</h1></div> 
+
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <!-- NAVBAR START -->
         <nav class="navbar">
             
           <ul id="main-nav">
-            <li><a class="nav-links" href="#">Home</a></li>
-            <li><a class="nav-links" href="#">About</a></li>
-            <li><a class="nav-links" href="#">Projects</a></li>
-            <li><a class="nav-links" href="#">Contact</a></li>
+            <li><a class="nav-links heading-marker x active" href="#heading">Start</a></li>
+            <li><a class="nav-links about-marker x" href="#about">O mnie</a></li>
+            <li><a class="nav-links projects-marker x" href="#projects">Projekty</a></li>
+            <li><a class="nav-links contact-marker x" href="#contact">Kontakt</a></li>
           </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -30,44 +63,404 @@
     
   </header>
   
-  <section class="heading">
+  <section class="heading" id="heading">
       
       
     <div class="heading-container">
    
     <div class="heading__heading-text heading-text">
-        <p class="text text--greeting">Hello!</p>
-        <div class="typed"></div>
-        <p class="text text--about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores quo neque facere libero nisi voluptatum velit, obcaecati laudantium esse delectus, rem totam quae quasi nobis? Doloremque minus.</p>
+        <p class="text text--greeting">Cześć!</p>
+        <div class="typed">M</div>
+        <div class="typed-2"></div>
+        <span class="text text--about">Interesuję się tworzeniem stron internetowym oraz pisaniem aplikacji. Moim marzeniem jest pisać aplikacje z wykorzystaniem biblioteki React. <h1>Szukam pierwszego zatrudnienia jako <p class="text--blue">junior front-end developer.</p></h1></span>
+        <p class="text--about mobile">
+          Szukam pierwszego zatrudnienia jako <span class="text--blue"> junior front-end developer</span>
+        </p>
+        <div class="button-container">
+         <a style="display: inline-block" href="#projects"><div class="button button-heading--1"><p><i class="fas fa-code-branch"></i>Ostatnie projekty</p></div></a>
+         <a style="display: inline-block; margin-left: 2.2em" href="#about"><div class="button button-heading--2"><p>Kilka słów o mnie</p></div></a>
+        </div>
+        <div class="container-scroller">
+          <a href="#about">
+            <div class="container-scroller__inner">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <span class="text--scroller">Scroll</span>
+              </div>
+            </a>
+        </div>
+
     </div>
     <div class="heading__heading-photo heading-photo">
-
+      <div class="social-links">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/gregordev"><i class="fab fa-github"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/grzegorz-walczak-71564a15a" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        
+      </div>
     </div>
     <div class="heading__heading-mypic heading-mypic">
-      <img src="./img/myimage.png" class="image-myImage" alt="">
+      <img src="./img/myimage.png" class="image-myImage" alt="Moje zdjęcie">
     </div>
   </div>
-  
+  </section>
+
+  <!-- *** Section About *** -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <!-- About Left -->
+      <div class="about__resume" data-aos="fade-right" data-aos-delay="50" data-aos-once="true">
+        <div class="border">
+            <img class="cv-image" src="./cv/cv.jpg" alt="">
+            <div class="cv-overlay">
+              <i class="fas fa-id-card"></i>
+              
+              <div class="button button--cv"><a href="./cv/grzegorzwalczak_pl.pdf" download="./cv/grzegorzwalczak_pl.pdf">Pobierz CV<i class="fas fa-file-download"></i></a></div>
+            </div>
+        </div>
+      </div>
+      <!-- About Right -->
+      <div class="about__description" data-aos="fade-in" data-aos-duration="1800" data-aos-delay="100" data-aos-once="true">
+        <p class="text text--introduction">
+          O mnie
+        </p>
+        <div class="hr"></div>
+        <span class="text text--description">
+          Nazywam się Grzegorz Walczak i jestem absolwentem studiów informatycznych na Uniwersytecie Ekonomicznym w Krakowie.<h2 class="text text--description"> Obecnie szukam pierwszego zatrudnienia jako junior front-end developer</h2>.
+        </span>
+        <span class="text text--description">
+          Tworzeniem stron internetowych interesuję się od bardzo dawna, lecz dopiero po ukończeniu studiów zrozumiałem, że jest to moja pasja. <h2 class="text text--description">Znam bardzo dobrze język angielski, którego używam każdego dnia.</h2> Jestem człowiekiem ambitnym, pełnym energii oraz nastawionym na ciągły rozwój.
+        </span>
+        <p class="text text--technologies">Technologie</p>
+        <!-- Technologies -->
+        <div class="technologies-container owl-carousel owl-theme">
+          <div class="technology technology-html">
+              <img src="./img/technologies/html.svg" class="technology-icon" alt="">
+          </div>
+            <div class="technology technology-css">
+                <img src="./img/technologies/css.svg" class="technology-icon" alt="">
+            </div>
+            <div class="technology technology-bootstrap">
+                <img src="./img/technologies/bootstrap.svg" class="technology-icon" alt="">
+            </div>
+            <div class="technology technology-sass">
+                <img src="./img/technologies/sass.svg" class="technology-icon" alt="">
+            </div>
+      
+        <div class="technology technology-git">
+            <img src="./img/technologies/github.svg" class="technology-icon" alt="">
+        </div>
+        <div class="technology technology-js">
+            <img src="./img/technologies/js.svg" class="technology-icon" alt="">
+        </div>
+        <div class="technology technology-vue">
+            <img src="./img/technologies/vue.svg" class="technology-icon" alt="">
+        </div>
+        <div class="technology technology-jquery">
+            <img src="./img/technologies/jquery.svg" class="technology-icon" alt="">
+        </div>
+        <div class="technology technology-gulp">
+            <img src="./img/technologies/gulp.svg" class="technology-icon" alt="">
+        </div>
+
+    </div>
+    <form>
+    <button class="button button-heading--2" formaction="./cv/cv.pdf"><i class="fas fa-file-download"></i> Pobierz cv</button>
+  </form>
+      </div>
+      
+    </div>
+  </section>
+  <!-- *** Section Projects ***-->
+  <section class="projects" id="projects">
+    <div class="projects-container">
 
     
+    <div class="projects__description" data-aos="fade-right" data-aos-once="true">
+      <p class="text text--introduction">
+            Ostatnie projekty
+      </p>
+      <div class="hr"></div>
+      <p class="text text--description">
+          Poniżej znajdują się projekty mojego autorstwa. Nie są to typowe projekty 'PSD to HTML' lub efekty nauki wraz z kursem. Każda z poniższych prac została zaprojektowana i napisana przeze mnie.
+        </p>
+    </div>
+    <div class="projects__container">
+      <!-- Projects Container -->
+      <div class="projects__container-inner">
+
+      
+          <div class="project project--1" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+              <img src="./img/project1.jpg" alt="" class="project-img">
+              <div class="overlay">
+                <div class="overlay__info">
+                  
+                <p class="text-project text-project--title">
+                    Dom Weselny "Gracja"
+                </p>
+                <p class="text-project text-project--description">
+                  Zlecenie komercyjne zrealizowane wspólnie z grafikiem przy wykorzystaniu Bootstrap 4.
+                </p>
+              </div>
+                  <div class="overlay-bottom">
+                    <p class="text-project text-project--link">
+                        <a target="_blank" rel="noopener noreferrer" href="http://sala-gracja.pl">Demo</a>
+                    </p>
+                  </div>
+              </div>
+          </div>
+          <div class="project project--2" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+              <img src="./img/project2.jpg" alt="" class="project-img">
+              <div class="overlay">
+                <div class="overlay__info">
+                  
+                <p class="text-project text-project--title">
+                    Diane Photography
+                </p>
+                <p class="text-project text-project--description">
+                  Strona fikcyjnego fotografa stworzona w ramach treningu, bez żadnego frameworka CSS.
+                </p>
+              </div>
+              <div class="overlay-bottom">
+                <p class="text-project text-project--link">
+                    <a target="_blank" rel="noopener noreferrer" href="http://gregordev.pl/websites/website_dianePhoto">Demo</a>
+                  
+                </p>
+                <p class="text-project text-project--link"><a target="_blank" href="https://github.com/gregordev/website_dianePhoto">Kod</p></a>
+              </div>
+              </div>
+          </div>
+          <div class="project project--3" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+              <img src="./img/project3.jpg" alt="" class="project-img">
+              <div class="overlay">
+                <div class="overlay__info">
+                  
+                <p class="text-project text-project--title">
+                    Psyche Center
+                </p>
+                <p class="text-project text-project--description">
+                  Strona fikcyjnego centrum szkoleniowego stworzona w ramach treningu przy wykorzystaniu Bootstrap 4.
+                </p>
+              </div>
+              <div class="overlay-bottom">
+                <p class="text-project text-project--link">
+                    <a target="_blank" rel="noopener noreferrer" href="http://gregordev.pl/websites/website_psycheCenter">Demo</a>
+                </p>
+                <p class="text-project text-project--link"><a target="_blank" href="https://github.com/gregordev/website_psycheCenter">Kod</a></p>
+              </div>
+              </div>
+          </div>
+          <div class="project project--4" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+              <img src="./img/project4.jpeg" alt="" class="project-img">
+              <div class="overlay">
+                <div class="overlay__info">
+                  
+                <p class="text-project text-project--title">
+                  Moje portfolio
+                </p>
+                <p class="text-project text-project--description">
+                  Strona nad którą spędziłem najwięcej czasu i w którą włożyłem najwięcej serca. Pisane przy wykorzystaniu Flexboxa.
+                </p>
+              </div>
+              <div class="overlay-bottom">
+                  <p class="text-project text-project--link">
+                      <a target="_blank" rel="noopener noreferrer" href="http://www.gregordev.pl/">Demo</a>
+                  </p>
+                <p class="text-project text-project--link"><a target="_blank" href="https://github.com/gregordev/website_portfolio_v2">Kod</p></a>
+              </div>
+              </div>
+          </div>
+          <div class="project project--5" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+              <img src="./img/project5.jpg" alt="" class="project-img">
+              <div class="overlay">
+                <div class="overlay__info">
+                  
+                <p class="text-project text-project--title">
+                    ToDo App
+                </p>
+                <p class="text-project text-project--description">
+                  Aplikacja służąca dodawaniu/usuwaniu tasków napisana w JS. Dane nt. tasków zapisywane są w strukturze danych.
+                </p>
+              </div>
+              <div class="overlay-bottom">
+                <p class="text-project text-project--link">
+                    <a target="_blank" rel="noopener noreferrer" href="http://gregordev.pl/apps/todolist">Demo</a>
+                </p>
+                <p class="text-project text-project--link"><a target="_blank" href="https://github.com/gregordev/todolist">Kod</p></a>
+              </div>
+              </div>
+          </div>
+          <div class="project project--6" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+              <img src="./img/project6.jpg" alt="" class="project-img">
+              <div class="overlay">
+                <div class="overlay__info">
+                  
+                <p class="text-project text-project--title">
+                    Weather App
+                </p>
+                <p class="text-project text-project--description">
+                  Prosta aplikacja pogodowa wykorzystująca zewnętrzne API oraz podstawy Ajax.
+                </p>
+              </div>
+              <div class="overlay-bottom">
+                <p class="text-project text-project--link"><a target="_blank" href="http://www.gregordev.pl/apps/weather_api">Demo</a></p>
+                <p class="text-project text-project--link">  <a target="blank" href="https://github.com/gregordev/weather_api">Kod</p></a>
+              </div>
+              </div>
+          </div>
+          <div class="project project--7" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+            <img src="./img/project7.jpeg" alt="" class="project-img">
+            <div class="overlay">
+              <div class="overlay__info">
+                
+              <p class="text-project text-project--title">
+                  Memory Game
+              </p>
+              <p class="text-project text-project--description">
+                Gra sprawdzająca pamięć. Należy zapamiętywać ułożenie poszczególnych kart na wygenerowanej macierzy.
+              </p>
+            </div>
+            <div class="overlay-bottom">
+              <p class="text-project text-project--link"><a target="_blank" href="./apps/memoryGame">Demo</a></p>
+              <p class="text-project text-project--link">Kod</p>
+            </div>
+            </div>
+        </div>
+        <div class="project project--8" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+          <img src="./img/project.png" alt="" class="project-img">
+          <div class="overlay">
+            <div class="overlay__info">
+              
+            <p class="text-project text-project--title">
+                In progress
+            </p>
+            <p class="text-project text-project--description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsa asperiores, temporibus facilis.
+            </p>
+          </div>
+          <div class="overlay-bottom">
+            <p class="text-project text-project--link">Demo</p>
+            <p class="text-project text-project--link">Kod</p>
+          </div>
+          </div>
+      </div>
+      <div class="project project--9" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+        <img src="./img/project.png" alt="" class="project-img">
+        <div class="overlay">
+          <div class="overlay__info">
+            
+          <p class="text-project text-project--title">
+              In progress
+          </p>
+          <p class="text-project text-project--description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsa asperiores, temporibus facilis.
+          </p>
+        </div>
+        <div class="overlay-bottom">
+          <p class="text-project text-project--link">Demo</p>
+          <p class="text-project text-project--link">Kod</p>
+        </div>
+        </div>
+    </div>
+        </div>
+      </div>
+  </div>
   </section>
-  <section class="about">
-    
+  <!-- *** Section Contact ***-->
+  <section class="contact" id="contact">
+      
+    <div class="contact-container">
+        <p class="text text--introduction text--introduction2" data-aos="fade-right" data-aos-once="true">
+            Skontaktuj się ze mną
+          </p>
+          <div class="hr hr--2"></div>
+          <div class="contact-mobile">
+              <div>
+                  <i class="fas fa-envelope"></i>
+                  <p class="text-contact">
+                    grzegorzwalczak94@gmail.com
+                  </p>
+                </div>
+                <div>
+                  <i class="fas fa-phone"></i>
+                  <p class="text-contact">
+                      +48 536 155 766
+                  </p>
+                </div>
+          </div>
+          <!-- Form -->
+          <div class="form-king">
+          <form id="contact-form" method="post" action="mailer.php">
+              <div class="form-container" data-aos="fade-in" data-aos-delay="80" data-aos-duration="1400" data-aos-once="true">
+                <!-- Form Left -->
+                  <div class="form-1">
+                    <div class="form-row">
+                      <input type="text" required id="name" class="name" name="name" maxlength="30" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+                      <label id="label-1" for="name">Imię</label>
+                    </div>
+                    <div class="form-row">
+                      <input type="email" required id="email" class="email" name="email" maxlength="30" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                      <label id="label-2" for="email">Adres e-mail</label>
+                    </div>
+                    <div class="form-row">
+                      <input type="tel" pattern="^[0-9-+s()]*$" required id="phone" data-error="Wpisz poprawny numer telefonu" class="phone" name="phone" maxlength="15">
+                      <label id="label-3" for="phone">Numer telefonu</label>
+                    </div>
+
+                  </div>
+                  <!-- Form Right -->
+                  <div class="form-2">
+                      <div class="form-row">
+                      <textarea name="message" id="message" required pattern=".+" data-error="Wpisz wiadomość" placeholder="Wpisz swoją wiadomość..."></textarea>
+                      </div>
+                  </div>
+          
+      
+          </div>
+          <div class="form-bottom">
+            <div class="contact-info">
+
+              <div class="contact-specific">
+              <i class="fas fa-envelope"></i>
+              <p class="text-contact">
+                grzegorzwalczak94@gmail.com
+              </p>
+            </div>
+            <div class="contact-specific">
+              <i class="fas fa-phone"></i>
+              <p class="text-contact">
+                  +48 536 155 766
+              </p>
+            </div>
+
+            </div>
+            <!-- Submit Form -->
+            <button type="submit" name="submit" id="submit" class="button--contact">Send</button>
+          </div>
+        </form>
+      </div>
   </section>
-  <section class="section-3">
-    
+  <!-- *** Section Footer *** -->
+  <section class="footer">
+    <footer>
+    <p class="text--footer">
+        &copy; 2018 GregorDev.pl All rights reserved.
+    </p>
+  </footer>
   </section>
-  <main>
+  
 
   </main>
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="./js/typed.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed(".typed", {
-      strings: ["My name is Grzegorz", "I am an IT student", "I live in Cracow", "I build websites"],
-      typeSpeed: 50,
-      backSpeed: 35,
-    });
-  
+  <script type="text/javascript" src="./js/owl.carousel.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
+
 </body>
 </html>
