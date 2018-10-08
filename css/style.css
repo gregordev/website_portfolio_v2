@@ -384,6 +384,11 @@ section.about {
 .button-container {
   padding-top: 1.8em; }
 
+.navigation-a {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center; }
+
 .button {
   font-size: 1.155em;
   display: block;
@@ -1158,6 +1163,9 @@ img.project-img {
     width: 80%;
     font-size: 1.2rem; }
 
+  .heading-a:nth-of-type(2) {
+    margin-left: 2.2em; }
+
   .text-project {
     padding-top: .6rem;
     padding-bottom: .4rem; }
@@ -1743,7 +1751,7 @@ img.project-img {
     height: 100%;
     width: 100%; } }
 @media only screen and (min-width: 950px) and (max-width: 1487px) {
-  .heading-text .button-container button.button-heading--2 {
+  .heading-text .button-container div.button-heading--2 {
     display: none !important; } }
 @media only screen and (min-width: 950px) and (max-width: 1190px) {
   .technologies-container {
